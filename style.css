@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://img.freepik.com/fotos-premium/um-fundo-preto-com-estrelas-no-ceu-noturno_416007-164.jpg);
+  animation: mover-ceu 100s linear infinite;
+}
+
+@keyframes mover-ceu {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px -1000px;
+  }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    border: 2px solid #ffffff80;
+    transition: 0.3s;
+    filter: blur(3px);
+  }
+  
+  button:hover::before {
+    border-color: #ffffffcc;
+    filter: blur(6px);
+  }
+  
+  button:hover {
+    color: #ffffffcc;
+  }
+  
+  /* Estilização para a seção de itens */
+  .items, .description {
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ffffff4d;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s ease;
+  }
+  
+  .items:hover, .description:hover {
+    border-color: #ffffff99;
+  }
+  
+  .items {
+    height: 300px;
+  }
+  
+  .description {
+    height: 200px;
+  }
