@@ -5,9 +5,9 @@ const items = [
     desc: `A "Força da Trindade" permite ao usuário sintetizar até três habilidades em corpo, mente e espírito, elevando suas capacidades a níveis divinos.`,
   },
   {
-    name: "Externação do Poder",
+    name: "Externação da Força",
     img: "externação-do-poder.webp",
-    desc: `A "Externação do Poder" concede ao portador a habilidade de influenciar objetos e o ambiente, assemelhando-se à telecinese.`,
+    desc: `A "Externação da Força" permite ao portador influenciar o ambiente e objetos de forma telecinética, agindo tanto passivamente quanto ativamente.`,
   },
 ];
 
@@ -37,7 +37,6 @@ const showDescription = (index) => {
   updateDescriptionUI(); // Atualiza a interface com a nova descrição
 };
 
-
 // Função para atualizar a interface com a descrição do item selecionado
 const updateDescriptionUI = () => {
   const descriptionSection = document.querySelector(".description");
@@ -50,4 +49,4 @@ const updateDescriptionUI = () => {
     `;
 };
 
-showDescription(0)
+showDescription(0);
