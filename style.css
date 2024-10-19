@@ -2,10 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 50px;
+
+  height: 100vh;
+  padding: 20px;
+
   background-image: url(https://img.freepik.com/fotos-premium/um-fundo-preto-com-estrelas-no-ceu-noturno_416007-164.jpg);
+
   animation: mover-ceu 100s linear infinite;
 }
 
@@ -19,63 +31,112 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-  }
-  
-  button {
-    padding: 12px 24px;
-    font-size: 16px;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    background: none;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-  }
-  
-  button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 8px;
-    border: 2px solid #ffffff80;
-    transition: 0.3s;
-    filter: blur(3px);
-  }
-  
-  button:hover::before {
-    border-color: #ffffffcc;
-    filter: blur(6px);
-  }
-  
-  button:hover {
-    color: #ffffffcc;
-  }
-  
-  /* Estilização para a seção de itens */
-  .items, .description {
-    margin: 20px auto;
-    max-width: 80%;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid #ffffff4d;
-    backdrop-filter: blur(10px);
-    transition: border-color 0.3s ease;
-  }
-  
-  .items:hover, .description:hover {
-    border-color: #ffffff99;
-  }
-  
-  .items {
-    height: 300px;
-  }
-  
-  .description {
-    height: 200px;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  border: 2px solid #ffffff80;
+  transition: 0.3s;
+  filter: blur(3px);
+}
+
+button:hover::before {
+  border-color: #ffffffcc;
+  filter: blur(6px);
+}
+
+button:hover {
+  color: #ffffffcc;
+}
+
+.items,
+.description {
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ffffff4d;
+  backdrop-filter: blur(2px);
+}
+
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 3;
+  gap: 10px;
+
+  overflow-y: auto;
+  height: 300px;
+}
+
+.items img {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.38);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.items img:hover {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.description h2 {
+  font-size: 1rem;
+  color: white;
+}
+
+.description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.description img {
+  width: 100px;
+  height: 100px;
+
+  border: 2px ridge white;
+  border-radius: 50%;
+}
+
+.description p {
+  font-size: 1rem;
+  color: white;
+}
